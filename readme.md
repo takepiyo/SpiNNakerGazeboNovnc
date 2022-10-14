@@ -1,5 +1,8 @@
 # SpiNNaker and Gazebo environment
-set env `source ~/.bashrc`
+
+This repository is designed to be built with vscode devcontainer.
+
+after open container, do `source ~/.bashrc`
 ## check python development env(Intellisense debugging etc..)
 maybe useful `check_env/python_check.py`
 
