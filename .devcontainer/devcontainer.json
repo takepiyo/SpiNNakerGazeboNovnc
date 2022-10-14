@@ -1,0 +1,80 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.0/containers/python-3
+{
+	"name": "SpiNNakerGazebo",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+	"runArgs": [
+		"-e RESOLUTION=1920x1080"
+		// "--gpus",
+		// "all"
+	],
+	"mounts": [
+		"source=/dev/shm,target=/dev/shm,type=bind,consistency=cached"
+	],
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"python.languageServer": "Pylance",
+				"python.linting.enabled": true,
+				"python.formatting.autopep8Path": "/usr/local/bin/autopep8",
+				"python.formatting.blackPath": "/usr/local/bin/black",
+				"python.formatting.yapfPath": "/usr/local/bin/yapf",
+				"python.linting.banditPath": "/usr/local/bin/bandit",
+				"python.linting.flake8Path": "/usr/local/bin/flake8",
+				"python.linting.mypyPath": "/usr/local/bin/mypy",
+				"python.linting.pycodestylePath": "/usr/local/bin/pycodestyle",
+				"python.linting.pydocstylePath": "/usr/local/bin/pydocstyle",
+				"python.linting.pylintPath": "/usr/local/bin/pylint",
+				"python.sortImports.path": "/usr/local/bin/isort",
+				"python.linting.pylintEnabled": false,
+				"python.linting.flake8Enabled": true,
+				"python.linting.flake8Args": [
+					"--ignore=E402,E501"
+				],
+				"python.formatting.provider": "autopep8",
+				"python.formatting.autopep8Args": [
+					"--ignore",
+					"E402,E501",
+					"--max-line-length",
+					"150"
+				],
+				"[python]": {
+					"editor.formatOnSave": true,
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": false
+					}
+				}
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"yy0931.save-as-root",
+				"usernamehw.errorlens",
+				"oderwat.indent-rainbow",
+				"shardulm94.trailing-spaces",
+				"ms-iot.vscode-ros",
+				"sweilz.ros-snippets",
+				"yzhang.markdown-all-in-one",
+				"redhat.vscode-xml",
+				"dotjoshjohnson.xml"
+			]
+		}
+	},
+	"appPort": [
+		"6080:80",
+		"5900:5900",
+		"8080:8080",
+		"11345:11345"
+	],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "/workspaces/SpiNNakerGazeboVNC/assets/install_ros_noetic.sh",
+	"postStartCommand": "/startup.sh"
+}

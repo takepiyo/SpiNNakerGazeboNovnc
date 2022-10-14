@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "run ros spinnaker interface example",
+            "type": "python",
+            "request": "launch",
+            "program": "/workspaces/SpiNNakerGazebo/ros_spinnaker_interface/examples/example_ros_spinnaker_interface.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
