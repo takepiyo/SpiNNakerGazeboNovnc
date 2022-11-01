@@ -20,10 +20,9 @@ check output figure.png
 if you want to check connect spinnaker board in the ISI lab, do `ping 192.168.240.1`
 
 ### Check operation with a simple example
-another terminal open and
+<!-- another terminal open and
 ```
 cd ~/catkin_ws/src
-cd ~/catkin_ws && catkin_make
 git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
 cd ~/catkin_ws && catkin_make
@@ -32,12 +31,14 @@ source ~/.bashrc
 cd ~/catkin_ws/src
 git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 cd ~/catkin_ws && catkin_make
-```
+``` -->
 launch turtlebot
 `roslaunch turtlebot3_gazebo turtlebot3_world.launch`
 `roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
 
 launch gzclient via noVNC
+if no vnc server is established, do `/startup.sh`.
+
 local terminal
 `ssh remote_server -N -f -L 6080:localhost:6080`
 open `http://localhost:6080` in browser
