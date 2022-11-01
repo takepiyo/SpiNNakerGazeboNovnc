@@ -43,7 +43,7 @@ local terminal
 `ssh remote_server -N -f -L 6080:localhost:6080`
 open `http://localhost:6080` in browser
 open terminal in brouwser desktop and command
-`gzclient`
+`gzclient` or `rviz` ...
 It will show turtlebot gazebo env. Also can teleop...
 
 ## install ros spinnaker interface
@@ -52,8 +52,21 @@ git clone https://github.com/takepiyo/ros_spinnaker_interface.git
 pip install -e ros_spinnaker_interface
 ```
 
-## install rviz web
-https://github.com/osrf/rvizweb
+## clone repo
+Clone the working ros package to `/workspaces/SpiNNakerGazeboVNC/catkin_ws/src`
+
+## alias
+```
+eb='nano ~/.bashrc'
+sb='source ~/.bashrc'
+gs='git status'
+gp='git pull'
+cw='cd /workspaces/SpiNNakerGazeboVNC/catkin_ws'
+cs='cd /workspaces/SpiNNakerGazeboVNC/catkin_ws/src'
+cm='cd /workspaces/SpiNNakerGazeboVNC/catkin_ws && catkin_make'
+```
+<!-- ## install rviz web
+https://github.com/osrf/rvizweb -->
 
 <!-- ## install ros -->
 
