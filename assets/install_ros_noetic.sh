@@ -64,7 +64,7 @@ sh -c "rosdep init"
 rosdep update
 
 echo "[Make the catkin workspace and test the catkin_make]"
-ws=${ws:="/workspaces/SpiNNakerGazeboVNC"}
+ws=${ws:="/workspaces/spinnakergazebovnc"}
 mkdir -p $ws/$name_catkin_workspace/src
 cd $ws/$name_catkin_workspace/src
 catkin_init_workspace
