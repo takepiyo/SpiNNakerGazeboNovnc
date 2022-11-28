@@ -6,8 +6,10 @@
                 "limitSymbolsToIncludedHeaders": true
             },
             "includePath": [
+                "/usr/include/**",
                 "/opt/ros/noetic/include/**",
-                "/usr/include/**"
+                "/workspaces/spinnakergazebovnc/catkin_ws/devel/include**",
+                "${workspaceFolder}/catkin_ws/src/spinnaker_navigation/test_planner/include"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
