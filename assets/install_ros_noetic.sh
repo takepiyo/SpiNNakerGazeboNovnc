@@ -52,12 +52,14 @@ apt install -y ros-$name_ros_version-desktop-full
 echo "[Install RQT & Gazebo]"
 apt install -y ros-$name_ros_version-rqt-* ros-$name_ros_version-gazebo-*
 
+apt install -y ros-noetic-ros-control ros-noetic-ros-controllers ros-noetic-slam-gmapping ros-noetic-map-server ros-noetic-amcl ros-noetic-move-base ros-noetic-dwa-local-planner
+
 echo "[Environment setup and getting rosinstall]"
 source /opt/ros/$name_ros_version/setup.sh
 apt install -y python3-rosinstall python3-rosinstall-generator python3-wstool build-essential git
 
 echo "[Install rosdep and Update]"
-apt install python3-rosdep
+apt install -y python3-rosdep
 
 echo "[Initialize rosdep and Update]"
 sh -c "rosdep init"
