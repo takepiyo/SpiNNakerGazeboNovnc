@@ -53,7 +53,10 @@
 				},
 				"python.analysis.extraPaths": [
 					"/opt/ros/noetic/lib/python3/dist-packages"
-				]
+				],
+				"[cpp]": {
+					"editor.defaultFormatter": "ms-vscode.cpptools"
+				},
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
@@ -70,7 +73,8 @@
 				"dotjoshjohnson.xml",
 				"ms-vscode.cpptools-extension-pack",
 				"twxs.cmake",
-				"ms-vscode.cmake-tools"
+				"ms-vscode.cmake-tools",
+				"jewsofhazard.cpp-pack"
 			]
 		}
 	},
@@ -82,6 +86,6 @@
 		"11345:11345"
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "/workspaces/spinnakergazebovnc/assets/install_ros_noetic.sh",
+	"postCreateCommand": "/workspaces/spinnakergazebovnc/assets/install_ros_noetic.sh"
 	// "postStartCommand": "/startup.sh"
 }
