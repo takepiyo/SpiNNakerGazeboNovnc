@@ -1,4 +1,5 @@
 {
     "ros.distro": "noetic",
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "cmake.sourceDirectory": "${workspaceFolder}/archive/gazebo1_lecture"
 }
