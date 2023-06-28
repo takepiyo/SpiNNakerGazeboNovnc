@@ -52,7 +52,7 @@ apt install -y ros-$name_ros_version-desktop-full
 echo "[Install RQT & Gazebo]"
 apt install -y ros-$name_ros_version-rqt-* ros-$name_ros_version-gazebo-*
 
-apt install -y ros-noetic-ros-control ros-noetic-ros-controllers ros-noetic-slam-gmapping ros-noetic-map-server ros-noetic-amcl ros-noetic-move-base ros-noetic-dwa-local-planner
+apt install -y ros-noetic-ros-control ros-noetic-ros-controllers ros-noetic-slam-gmapping ros-noetic-map-server ros-noetic-amcl ros-noetic-move-base ros-noetic-dwa-local-planner ros-noetic-moveit-* ros-noetic-joint-state-controller ros-noetic-effort-controllers ros-noetic-position-controllers ros-noetic-joint-trajectory-controller liburdfdom-tools
 
 echo "[Environment setup and getting rosinstall]"
 source /opt/ros/$name_ros_version/setup.sh

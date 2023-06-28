@@ -1,5 +1,9 @@
 {
     "ros.distro": "noetic",
     "cmake.configureOnOpen": false,
-    "cmake.sourceDirectory": "${workspaceFolder}/archive/gazebo1_lecture"
+    "cmake.sourceDirectory": "${workspaceFolder}/archive/gazebo1_lecture",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none"
 }
