@@ -86,6 +86,6 @@
 		"11345:11345"
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "/workspaces/spinnakergazebovnc/assets/install_ros_noetic.sh"
+	// "postCreateCommand": "/workspaces/spinnakergazebovnc/assets/install_ros_noetic.sh"
 	// "postStartCommand": "/startup.sh"
 }

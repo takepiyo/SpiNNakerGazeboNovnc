@@ -2,6 +2,12 @@
 
 This repository is designed to be built with vscode devcontainer.
 
+## install ros noetic
+```
+./assets/install_ros_noetic.sh
+```
+https://github.com/ROBOTIS-GIT/robotis_tools/blob/master/install_ros_noetic.sh
+
 after open container, do `source ~/.bashrc`
 ## check python development env(Intellisense debugging etc..)
 maybe useful `check_env/python_check.py`
@@ -10,6 +16,7 @@ maybe useful `check_env/python_check.py`
 ```
 pip install matplotlib
 pip install sPyNNaker
+pip install --upgrade numpy==1.20
 python -m spynnaker8.setup_pynn
 python -c "import pyNN.spiNNaker as sim; sim.setup(); sim.end()"
 cp /workspaces/spinnakergazebovnc/assets/.spynnaker.cfg ~/.spynnaker.cfg
@@ -17,7 +24,7 @@ python check_env/spinnaker_check.py
 ```
 check output figure.png
 
-if you want to check connect spinnaker board in the ISI lab, do `ping 192.168.240.1`
+if you want to check connect spinnaker board, do `ping 192.168.240.1` (General SpiNNaker board ip address)
 
 ### Check operation with a simple example
 <!-- another terminal open and
@@ -37,14 +44,14 @@ launch turtlebot
 `roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
 
 launch gzclient via noVNC
-if no vnc server is established, do `/startup.sh`.
+if no vnc server is established, do `/startup.sh`. or `nohup /startup.sh &`
 
 local terminal
 `ssh remote_server -N -f -L 6080:localhost:6080`
 open `http://localhost:6080` in browser
-open terminal in brouwser desktop and command
-`gzclient` or `rviz` ...
-It will show turtlebot gazebo env. Also can teleop...
+open terminal in browser desktop and command
+<!-- `gzclient` or `rviz` ... -->
+<!-- It will show turtlebot gazebo env. Also can teleop... -->
 
 ## install ros spinnaker interface
 ```
