@@ -19,7 +19,7 @@ pip install sPyNNaker
 pip install --upgrade numpy==1.20
 python -m spynnaker8.setup_pynn
 python -c "import pyNN.spiNNaker as sim; sim.setup(); sim.end()"
-cp /workspaces/spinnakergazebovnc/assets/.spynnaker.cfg ~/.spynnaker.cfg
+cp /workspaces/spinnaker-gazebo-novnc/assets/.spynnaker.cfg ~/.spynnaker.cfg
 python check_env/spinnaker_check.py
 ```
 check output figure.png
@@ -60,7 +60,7 @@ pip install -e ros_spinnaker_interface
 ```
 
 ## clone repo
-Clone the working ros package to `/workspaces/spinnakergazebovnc/catkin_ws/src`
+Clone the working ros package to `/workspaces/spinnaker-gazebo-novnc/catkin_ws/src`
 
 ## alias
 ```
@@ -68,9 +68,9 @@ eb='nano ~/.bashrc'
 sb='source ~/.bashrc'
 gs='git status'
 gp='git pull'
-cw='cd /workspaces/spinnakergazebovnc/catkin_ws'
-cs='cd /workspaces/spinnakergazebovnc/catkin_ws/src'
-cm='cd /workspaces/spinnakergazebovnc/catkin_ws && catkin_make'
+cw='cd /workspaces/spinnaker-gazebo-novnc/catkin_ws'
+cs='cd /workspaces/spinnaker-gazebo-novnc/catkin_ws/src'
+cm='cd /workspaces/spinnaker-gazebo-novnc/catkin_ws && catkin_make'
 ```
 <!-- ## install rviz web
 https://github.com/osrf/rvizweb -->
